@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="6" parallel="tests" name="Suite">
+<parameter name="cpath" value="F:\\chromedriver\\chromedriver.exe"></parameter>
+<parameter name="mpath" value="F:\\chromedriver\\geckodriver.exe"></parameter> 
+<parameter name="site" value="https://www.google.com"></parameter> 
+<test  name="Test">
+    <classes >
+      	
+		<class name="TestNGCode.March17_Parameter">
+			<parameter name="browser" value="chrome"></parameter>
+      	</class>
+    </classes>
+  </test> <!-- Test -->
+
+<test thread-count="6" parallel="classes" name="Test1">
+    <classes >      	
+		<class name="TestNGCode.March17_Parameter">
+			<parameter name="browser" value="mozila"></parameter>
+      	</class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
